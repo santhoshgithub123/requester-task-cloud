@@ -7,7 +7,7 @@
 	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>http-requester</name>
+	<name>http-requester-cloud</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,6 +29,22 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.4.0</muleVersion>
+						<username>Santhosh_mulesoft1123</username>
+						<password>Santhosh#1231</password>
+						<applicationName>cicd-api-maven</applicationName>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
+						<objectStoreV2>true</objectStoreV2>
+					</cloudHubDeployment>
+				</configuration>
+				
+				
 			</plugin>
 		</plugins>
 	</build>
